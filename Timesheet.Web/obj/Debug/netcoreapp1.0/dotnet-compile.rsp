@@ -1,5 +1,5 @@
---temp-output:D:\Projects\GenericCoders\timesheet\src\timesheet\obj\Debug\netcoreapp1.0\
---out:D:\Projects\GenericCoders\timesheet\src\timesheet\bin\Debug\netcoreapp1.0\timesheet.dll
+--temp-output:D:\Projects\SideProjects\timesheet-nathan-fork\Timesheet.Web\obj\Debug\netcoreapp1.0\
+--out:D:\Projects\SideProjects\timesheet-nathan-fork\Timesheet.Web\bin\Debug\netcoreapp1.0\Timesheet.Web.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -8,7 +8,7 @@
 --suppress-warning:CS1705
 --optimize:False
 --emit-entry-point:True
---output-name:timesheet
+--output-name:Timesheet.Web
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -190,7 +190,7 @@
 --reference:C:\Users\Nathan\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Nathan\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Nathan\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"D:\Projects\GenericCoders\timesheet\src\timesheet\obj\Debug\netcoreapp1.0\timesheetdotnet-compile.deps.json",timesheet.deps.json
-D:\Projects\GenericCoders\timesheet\src\timesheet\Program.cs
-D:\Projects\GenericCoders\timesheet\src\timesheet\Startup.cs
-D:\Projects\GenericCoders\timesheet\src\timesheet\Controllers\HomeController.cs
+--resource:"D:\Projects\SideProjects\timesheet-nathan-fork\Timesheet.Web\obj\Debug\netcoreapp1.0\Timesheet.Webdotnet-compile.deps.json",Timesheet.Web.deps.json
+D:\Projects\SideProjects\timesheet-nathan-fork\Timesheet.Web\Program.cs
+D:\Projects\SideProjects\timesheet-nathan-fork\Timesheet.Web\Startup.cs
+D:\Projects\SideProjects\timesheet-nathan-fork\Timesheet.Web\Controllers\HomeController.cs

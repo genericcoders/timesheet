@@ -3,14 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5E40FD65-C3BA-404A-AD1B-79DA15E1602F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E980FCA2-D495-41CA-A536-4235E874574B}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "timesheet", "src\timesheet\timesheet.xproj", "{3342E4BE-8286-47B9-842E-2F9475C44D8C}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Timesheet.Web", "Timesheet.Web\Timesheet.Web.xproj", "{3342E4BE-8286-47B9-842E-2F9475C44D8C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Timesheet.Api", "Timesheet.Api\Timesheet.Api.xproj", "{6CC3AB35-E648-47A0-B498-C557904E8852}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{1F901081-1C26-4368-B5B2-CB136C913CF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{A622ED80-F558-4752-A940-89A66E5BE9CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C3E1E7B0-A485-4DBD-9B2B-8071511FA09E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{9FCF0F6B-3339-4F11-9C7F-249CEBA9B3F3}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Timesheet.Repository", "Timesheet.Repository\Timesheet.Repository.xproj", "{746C30AE-6552-4E21-840D-6C027C72B7F8}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Timesheet.Service", "Timesheet.Service\Timesheet.Service.xproj", "{7845CD85-6DC5-4E8E-BA11-658825FFC1D1}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Timesheet.Test", "Timesheet.Test\Timesheet.Test.xproj", "{3E482BB7-C054-482C-8B63-AB2E7D3FD8EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,11 +36,30 @@ Global
 		{3342E4BE-8286-47B9-842E-2F9475C44D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3342E4BE-8286-47B9-842E-2F9475C44D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3342E4BE-8286-47B9-842E-2F9475C44D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC3AB35-E648-47A0-B498-C557904E8852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC3AB35-E648-47A0-B498-C557904E8852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC3AB35-E648-47A0-B498-C557904E8852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC3AB35-E648-47A0-B498-C557904E8852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746C30AE-6552-4E21-840D-6C027C72B7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746C30AE-6552-4E21-840D-6C027C72B7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746C30AE-6552-4E21-840D-6C027C72B7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746C30AE-6552-4E21-840D-6C027C72B7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7845CD85-6DC5-4E8E-BA11-658825FFC1D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7845CD85-6DC5-4E8E-BA11-658825FFC1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7845CD85-6DC5-4E8E-BA11-658825FFC1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7845CD85-6DC5-4E8E-BA11-658825FFC1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E482BB7-C054-482C-8B63-AB2E7D3FD8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E482BB7-C054-482C-8B63-AB2E7D3FD8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E482BB7-C054-482C-8B63-AB2E7D3FD8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E482BB7-C054-482C-8B63-AB2E7D3FD8EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3342E4BE-8286-47B9-842E-2F9475C44D8C} = {5E40FD65-C3BA-404A-AD1B-79DA15E1602F}
+		{6CC3AB35-E648-47A0-B498-C557904E8852} = {1F901081-1C26-4368-B5B2-CB136C913CF6}
+		{746C30AE-6552-4E21-840D-6C027C72B7F8} = {A622ED80-F558-4752-A940-89A66E5BE9CF}
+		{7845CD85-6DC5-4E8E-BA11-658825FFC1D1} = {C3E1E7B0-A485-4DBD-9B2B-8071511FA09E}
+		{3E482BB7-C054-482C-8B63-AB2E7D3FD8EE} = {9FCF0F6B-3339-4F11-9C7F-249CEBA9B3F3}
 	EndGlobalSection
 EndGlobal
