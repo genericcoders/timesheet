@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Timesheet.Test
+namespace Timesheet.Tests
 {
     public class Class1
     {
