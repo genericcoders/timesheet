@@ -6,4 +6,7 @@ SETUP
             will automatically generate those folders
         b. In Windows, if you need to create a .gitignore file, create a file called
             ".gitignore." to by pass bullshit Windows file naming issues.
-    
+
+USING APPLICATION IN COMMAND LINE
+-make sure to be navigated to the /timesheet/dragon folder
+    1. npm start - runs the server
