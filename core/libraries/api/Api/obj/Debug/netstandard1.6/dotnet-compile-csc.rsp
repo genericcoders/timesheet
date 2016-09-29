@@ -8,8 +8,8 @@
 -debug:full
 -nostdlib
 -nologo
-"D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Service\obj\Debug\netstandard1.6\dotnet-compile.assemblyinfo.cs"
--out:"D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Service\bin\Debug\netstandard1.6\Timesheet.Service.dll"
+"D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\api\Api\obj\Debug\netstandard1.6\dotnet-compile.assemblyinfo.cs"
+-out:"D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\api\Api\bin\Debug\netstandard1.6\Api.dll"
 -r:"C:\Users\Nathan\.nuget\packages\Microsoft.Win32.Primitives\4.0.1\ref\netstandard1.3\Microsoft.Win32.Primitives.dll"
 -r:"C:\Users\Nathan\.nuget\packages\System.AppContext\4.1.0\ref\netstandard1.6\System.AppContext.dll"
 -r:"C:\Users\Nathan\.nuget\packages\System.Collections\4.0.11\ref\netstandard1.3\System.Collections.dll"
@@ -53,6 +53,5 @@
 -r:"C:\Users\Nathan\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\Nathan\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Nathan\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
-"D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Service\Class1.cs"
-"D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Service\Models\Timesheet.cs"
-"D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Service\Properties\AssemblyInfo.cs"
+"D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\api\Api\Class1.cs"
+"D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\api\Api\Properties\AssemblyInfo.cs"
