@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Timesheet.Services;
+using Timesheet.Services.Interfaces;
+using Timesheet.Service;
 
 namespace Timesheet.Api
 {
@@ -31,7 +34,10 @@ namespace Timesheet.Api
             services.AddMvc()
                 .AddXmlDataContractSerializerFormatters();
 
+            //services.AddDbContext<TimesheetEntities>();
             services.AddSwaggerGen();
+
+            services.AddScoped(typeof (ITimesheetService), typeof (TimesheetService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
