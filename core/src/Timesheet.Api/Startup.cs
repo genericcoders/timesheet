@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Timesheet.Services;
 using Timesheet.Services.Interfaces;
-using Timesheet.Service;
 
 namespace Timesheet.Api
 {

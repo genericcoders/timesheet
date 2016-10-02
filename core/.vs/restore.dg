@@ -1,2 +1,12 @@
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\test\Timesheet.Tests\Timesheet.Tests.xproj
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Dto\Timesheet.Dto.xproj
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\Repository\Repository.Generic\Repository.Generic.xproj
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.DataModel\Timesheet.Entities.xproj
 #:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Api\Timesheet.Api.xproj
+D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Api\Timesheet.Api.xproj|D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.DataModel\Timesheet.Entities.xproj
 D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Api\Timesheet.Api.xproj|D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Services\Timesheet.Services.xproj
+D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Services\Timesheet.Services.xproj|D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\Services\Services.Generic\Services.Generic.xproj
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Constants\Timesheet.Constants.xproj
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Services\Timesheet.Services.xproj
+D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Services\Timesheet.Services.xproj|D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\Services\Services.Generic\Services.Generic.xproj
+#:D:\Projects\SideProjects\timesheet-nathan-fork\core\libraries\Services\Services.Generic\Services.Generic.xproj

@@ -3666,6 +3666,19 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Services.Generic/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netstandard1.6/Services.Generic.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/Services.Generic.dll": {}
+        }
+      },
       "Timesheet.DataModel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
@@ -3674,12 +3687,27 @@
           "NETStandard.Library": "1.6.0"
         }
       },
-      "Timesheet.Services/1.0.0": {
+      "Timesheet.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.0.1",
           "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netstandard1.6/Timesheet.Entities.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/Timesheet.Entities.dll": {}
+        }
+      },
+      "Timesheet.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "1.0.1",
+          "NETStandard.Library": "1.6.0",
+          "Services.Generic": "1.0.0"
         },
         "compile": {
           "netstandard1.6/Timesheet.Services.dll": {}
@@ -9751,9 +9779,19 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "Services.Generic/1.0.0": {
+      "type": "project",
+      "path": "../../libraries/Services/Services.Generic/project.json",
+      "msbuildProject": "../../libraries/Services/Services.Generic/Services.Generic.xproj"
+    },
     "Timesheet.DataModel/1.0.0": {
       "type": "project",
       "path": "../Timesheet.DataModel/project.json"
+    },
+    "Timesheet.Entities/1.0.0": {
+      "type": "project",
+      "path": "../Timesheet.DataModel/project.json",
+      "msbuildProject": "../Timesheet.DataModel/Timesheet.Entities.xproj"
     },
     "Timesheet.Services/1.0.0": {
       "type": "project",

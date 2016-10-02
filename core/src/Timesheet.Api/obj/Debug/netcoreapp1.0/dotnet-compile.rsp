@@ -180,6 +180,8 @@
 --reference:C:\Users\Nathan\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\Nathan\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
 --reference:C:\Users\Nathan\.nuget\packages\System.Xml.XPath\4.0.1\ref\netstandard1.3\System.Xml.XPath.dll
+--reference:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.DataModel\bin\Debug\netstandard1.6\Timesheet.DataModel.dll
+--reference:D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Services\bin\Debug\netstandard1.6\Timesheet.Services.dll
 --resource:"D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Api\obj\Debug\netcoreapp1.0\Timesheet.Apidotnet-compile.deps.json",Timesheet.Api.deps.json
 D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Api\Program.cs
 D:\Projects\SideProjects\timesheet-nathan-fork\core\src\Timesheet.Api\Startup.cs

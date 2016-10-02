@@ -18,9 +18,7 @@
     "Swashbuckle": "6.0.0-beta902",
     "Microsoft.AspNetCore.Mvc.Formatters.Xml": "1.0.1",
     "Microsoft.EntityFrameworkCore": "1.0.1",
-    "Timesheet.Services": "1.0.0-*",
-    "Timesheet.DataModel": "1.0.0-*"
-  },
+    "Timesheet.Services": "1.0.0-*"  },
 
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"

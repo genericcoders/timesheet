@@ -23,6 +23,7 @@ namespace Timesheet.Api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            //_timesheetService.
             return new string[] { "value1", "value2" };
         }
 

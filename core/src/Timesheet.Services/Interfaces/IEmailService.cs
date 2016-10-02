@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Services.Generic.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Timesheet.Services.Interfaces
 {
-    public interface IEmailService
+    public interface IEmailService : IBaseService
     {
+
     }
 }

@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Generic
 {
-    public class GenericDbRepository<TRepo> where TRepo : class
+    public class GenericRepository<TRepo> where TRepo : class
     {
         protected readonly DbContext dbContext;
         protected DbSet<TRepo> dbSet; 
-        public GenericDbRepository(DbContext dbContext)
+        public GenericRepository(DbContext dbContext)
         {
             this.dbContext = dbContext;
             dbSet = this.dbContext.Set<TRepo>();
