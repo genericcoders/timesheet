@@ -1,6 +1,3 @@
-Dragon
-    This is the front-end Angular 2 application built for the timesheet application. It will rely on the Core project for back-end.
-
 SETUP
 -requires: Node and npm
     1. in directory, run npm install.
