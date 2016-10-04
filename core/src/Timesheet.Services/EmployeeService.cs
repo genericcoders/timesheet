@@ -11,7 +11,7 @@ namespace Timesheet.Services
     public class EmployeeService : IEmployeeService
     {
         //TODO: Implement Repository
-        private ITimesheetEntities _db;
+        private readonly ITimesheetEntities _db;
 
         public EmployeeService(ITimesheetEntities timesheetEntities)
         {

@@ -12,7 +12,7 @@ namespace Timesheet.Api.Controllers
     [Route("api/[controller]")]
     public class Employee : Controller
     {
-        private IEmployeeService _employeeSvc; 
+        private readonly IEmployeeService _employeeSvc; 
         public Employee(IEmployeeService employeeService)
         {
             _employeeSvc = employeeService; 
