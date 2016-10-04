@@ -13,50 +13,55 @@ using Timesheet.Services;
 
 namespace Timesheet.Api
 {
-    public class Startup
-    {
-        public Startup(IHostingEnvironment env)
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+	public class Startup
+	{
+		public Startup(IHostingEnvironment env)
+		{
+			var builder = new ConfigurationBuilder()
+				 .SetBasePath(env.ContentRootPath)
+				 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+				 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
-            if (env.IsEnvironment("Development"))
-            {
-                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
+			if (env.IsEnvironment("Development"))
+			{
+				// This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
+				builder.AddApplicationInsightsSettings(developerMode: true);
+			}
 
-            builder.AddEnvironmentVariables();
-            Configuration = builder.Build();
-        }
+			builder.AddEnvironmentVariables();
+			Configuration = builder.Build();
+		}
 
-        public IConfigurationRoot Configuration { get; }
+		public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container
-        public void ConfigureServices(IServiceCollection services)
-        {
-            // Add framework services.
-            services.AddApplicationInsightsTelemetry(Configuration);
+		// This method gets called by the runtime. Use this method to add services to the container
+		public void ConfigureServices(IServiceCollection services)
+		{
+			// Add framework services.
+			services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.AddDbContext<TimesheetEntities>();
-            services.AddScoped(typeof (ITimesheetService), typeof (TimesheetService));
+			services.AddDbContext<TimesheetEntities>();
+			services.AddScoped(typeof(IEmployeeService), typeof(EmployeeService));
+			services.AddScoped(typeof(ITimesheetService), typeof(TimesheetService));
+			services.AddScoped(typeof(ITimesheetEntities), typeof(TimesheetEntities));
 
-            services.AddMvc();
-        }
+			services.AddMvc();
+			services.AddSwaggerGen();
+		}
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+		{
+			loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+			loggerFactory.AddDebug();
 
-            app.UseApplicationInsightsRequestTelemetry();
+			app.UseApplicationInsightsRequestTelemetry();
 
-            app.UseApplicationInsightsExceptionTelemetry();
+			app.UseApplicationInsightsExceptionTelemetry();
 
-            app.UseMvc();
-        }
-    }
+			app.UseMvc();
+			app.UseSwagger();
+			app.UseSwaggerUi();
+		}
+	}
 }

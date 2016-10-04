@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Timesheet.Constants
 {
-	public class Configuration
+	public class TimesheetConfig
 	{
 		public const string ConnectionString =
 			"Server=TERMINAL;Database=Timesheet;Trusted_Connection=true;MultipleActiveResultSets=true;";
