@@ -12,5 +12,10 @@ namespace Timesheet.Entities.Context
 
         public DbSet<TimesheetEntity> Timesheet { get; set; }
         public DbSet<EmployeeEntity> Employee { get; set; }
-    }
+
+		public void Complete()
+		{
+			SaveChanges();
+		}
+	}
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Timesheet.Dto
 {
-    public class Timesheet
+    public class TimesheetDto
     {
         public int Id { get; set; }
         public int LocationId { get; set; }
