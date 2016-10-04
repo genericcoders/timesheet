@@ -9,7 +9,7 @@ using Timesheet.Services.Interfaces;
 
 namespace Timesheet.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/timesheet")]
     public class TimesheetController : Controller
     {
         private ITimesheetService _timesheetSvc;
