@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Timesheet.Services.Interfaces;
+
+// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Timesheet.Api.Controllers
 {
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
+    [Route("api/timesheet")]
+    public class TimesheetController : Controller
     {
-        // GET api/values
+        private ITimesheetService _timesheetSvc;
+        public TimesheetController(ITimesheetService timesheetService)
+        {
+            _timesheetSvc = timesheetService;
+          
+        }
+
+        // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
