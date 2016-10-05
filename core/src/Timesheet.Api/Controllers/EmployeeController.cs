@@ -35,7 +35,7 @@ namespace Timesheet.Api.Controllers
 
 		// POST api/values
 		[HttpPost]
-		public IActionResult Post(EmployeeDto employeeDto)
+		public IActionResult Post([FromBody]EmployeeDto employeeDto)
 		{
 			_employeeSvc.Add(employeeDto);
 			return Ok();

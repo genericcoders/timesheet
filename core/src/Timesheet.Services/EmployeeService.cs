@@ -26,12 +26,12 @@ namespace Timesheet.Services
 			return employees.Select(EntityToDtoModel);
 		}
 
-		public EmployeeDto Add(EmployeeDto dtoEmployee)
+		public EmployeeDto Add(EmployeeDto employeeDto)
 		{
-			var employeeEntity = DtoModelToEntity(dtoEmployee);
+			var employeeEntity = DtoModelToEntity(employeeDto);
 			_db.Employee.Add(employeeEntity);
 			_db.Complete();
-			return dtoEmployee;
+			return employeeDto;
 		}
 
 
