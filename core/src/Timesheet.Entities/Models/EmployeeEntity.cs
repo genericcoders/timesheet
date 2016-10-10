@@ -16,6 +16,6 @@ namespace Timesheet.Entities.Models
         public int? SupervisorId { get; set; }
         public bool? Active { get; set; }
 
-        public virtual TimesheetEntity TimeSheet { get; set; }
+        //public virtual TimesheetEntity TimeSheet { get; set; }
     }
 }

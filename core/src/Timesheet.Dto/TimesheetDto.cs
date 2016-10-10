@@ -15,8 +15,5 @@ namespace Timesheet.Dto
         public string AddedBy { get; set; }
         public System.DateTime DayWorked { get; set; }
         public bool IsPto { get; set; }
-
-        //public virtual Employee Employee { get; set; }
-        //public virtual Location Location { get; set; }
     }
 }
