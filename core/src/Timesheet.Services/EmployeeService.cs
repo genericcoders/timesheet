@@ -3,60 +3,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Timesheet.Dto;
-using Timesheet.Entities.Context;
 using Timesheet.Entities.Models;
 using Timesheet.Services.Interfaces;
+using Generic.Repository.Interfaces;
+using AutoMapper;
 
 namespace Timesheet.Services
 {
 	public class EmployeeService : IEmployeeService
 	{
-		//TODO: Implement Repository
-		private readonly ITimesheetEntities _db;
+		private readonly IRepository<EmployeeEntity, int> _employeeRepo;
+		private readonly IMapper _mapper;
 
-		public EmployeeService(ITimesheetEntities timesheetEntities)
+		public EmployeeService(IRepository<EmployeeEntity, int> employeeRepository, IMapper mapper)
 		{
-			_db = timesheetEntities;
+			_employeeRepo = employeeRepository;
+			_mapper = mapper;
 		}
 
-		public IEnumerable<EmployeeDto> GetAll()
+		public List<EmployeeDto> GetAll()
 		{
-			var employees = _db.Employee.Where(x => x.Active == true);
-
-			return employees.Select(EntityToDtoModel);
+			var employees = _employeeRepo.Get()
+										.Where(x => x.Active == true)
+										.Select(x => _mapper.Map<EmployeeEntity, EmployeeDto>(x));
+			return employees.ToList();
 		}
 
 		public EmployeeDto Add(EmployeeDto employeeDto)
 		{
-			var employeeEntity = DtoModelToEntity(employeeDto);
-			_db.Employee.Add(employeeEntity);
-			_db.Complete();
+			var employeeEntity = _mapper.Map<EmployeeDto, EmployeeEntity>(employeeDto);
+			var isCreated = _employeeRepo.Create(employeeEntity);
 			return employeeDto;
 		}
 
 
-		private static EmployeeDto EntityToDtoModel(EmployeeEntity employeeEntity)
-		{
-			//TODO: Implement AutoMapper
-			return new EmployeeDto()
-			{
-				Active = employeeEntity.Active,
-				FirstName = employeeEntity.FirstName,
-				Id = employeeEntity.Id,
-				LastName = employeeEntity.LastName
-			};
-		}
+		//private static EmployeeDto EntityToDtoModel(EmployeeEntity employeeEntity)
+		//{
+		//    //TODO: Implement AutoMapper
+		//    return new EmployeeDto()
+		//    {
+		//        Active = employeeEntity.Active,
+		//        FirstName = employeeEntity.FirstName,
+		//        Id = employeeEntity.Id,
+		//        LastName = employeeEntity.LastName
+		//    };
+		//}
 
-		private static EmployeeEntity DtoModelToEntity(EmployeeDto dtoEmployee)
-		{
-			//TODO: Implement AutoMapper
-			return new EmployeeEntity()
-			{
-				Active = dtoEmployee.Active,
-				FirstName = dtoEmployee.FirstName,
-				Id = dtoEmployee.Id,
-				LastName = dtoEmployee.LastName
-			};
-		}
+		//private static EmployeeEntity DtoModelToEntity(EmployeeDto dtoEmployee)
+		//{
+		//    //TODO: Implement AutoMapper
+		//    return new EmployeeEntity()
+		//    {
+		//        Active = dtoEmployee.Active,
+		//        FirstName = dtoEmployee.FirstName,
+		//        Id = dtoEmployee.Id,
+		//        LastName = dtoEmployee.LastName
+		//    };
+		//}
 	}
 }
