@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Generic.Repository": "1.0.0-*",
+    "NETStandard.Library": "1.6.0",
+    "Timesheet.Dto": "1.0.0-*",
+    "Timesheet.Entities": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
