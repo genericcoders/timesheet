@@ -47,6 +47,12 @@ namespace Timesheet.Api.Controllers
 		{
 		}
 
+		[HttpPatch("{id}")]
+		public void Patch(int id, [FromBody] EmployeeDto employeeDto)
+		{
+			
+		}
+
 		// DELETE api/values/5
 		[HttpDelete("{id}")]
 		public void Delete(int id)

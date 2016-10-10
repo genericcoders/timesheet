@@ -18,7 +18,11 @@
 		"Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
 		"Timesheet.Services": "1.0.0-*",
 		"Timesheet.Entities": "1.0.0-*",
-		"Swashbuckle": "6.0.0-beta902"
+    "Swashbuckle": "6.0.0-beta902",
+    "Generic.Repository": "1.0.0-*",
+    "Timesheet.Repository": "1.0.0-*",
+    "AutoMapper.Extensions.Microsoft.DependencyInjection": "1.1.2",
+    "AutoMapper": "5.1.1"
 	},
 
 	"tools": {

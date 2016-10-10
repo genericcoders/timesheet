@@ -2,9 +2,7 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "AutoMapper": "5.1.1",
     "Generic.Repository": "1.0.0-*",
-    "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
     "NETStandard.Library": "1.6.0",
     "Timesheet.Dto": "1.0.0-*",
     "Timesheet.Entities": "1.0.0-*"
