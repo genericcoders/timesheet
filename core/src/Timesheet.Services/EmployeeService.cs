@@ -40,7 +40,6 @@ namespace Timesheet.Services
 		public bool Delete(EmployeeDto emplotDto)
 		{
 			bool isDeleted =_employeeRepo.Delete(emplotDto.Id);
-			var test = "test";
 
 			return isDeleted; 
 		}
