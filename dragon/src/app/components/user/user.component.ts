@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  users:Users;
   name:string;
   swap:boolean;
   age:number;
@@ -42,6 +43,18 @@ export class UserComponent implements OnInit {
     }
     this.swap = !this.swap;
   }
+}
+interface Users {
+  users:User[]
+}
+
+interface User {
+  name:string,
+  swap:boolean,
+  age:number,
+  email:string,
+  address:Address,
+  Hobbies:string[]
 }
 
 interface Address {
