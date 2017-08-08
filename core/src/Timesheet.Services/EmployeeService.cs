@@ -7,6 +7,7 @@ using Timesheet.Entities.Models;
 using Timesheet.Services.Interfaces;
 using Generic.Repository.Interfaces;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace Timesheet.Services
 {
@@ -34,6 +35,13 @@ namespace Timesheet.Services
 			var employeeEntity = _mapper.Map<EmployeeDto, EmployeeEntity>(employeeDto);
 			var isCreated = _employeeRepo.Create(employeeEntity);
 			return employeeDto;
+		}
+
+		public bool Delete(EmployeeDto emplotDto)
+		{
+			bool isDeleted =_employeeRepo.Delete(emplotDto.Id);
+
+			return isDeleted; 
 		}
 
 
