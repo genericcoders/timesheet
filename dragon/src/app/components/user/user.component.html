@@ -6,6 +6,9 @@
     <li>Email - {{email}}</li>
     <li>Address - {{address.street}}, {{address.city}} {{address.state}} {{address.zip}}
     <li>
+        <button (click)="onClick()">User Click</button>
+    </li>
+    <li>
         Hobbies:
         <ul>
             <li *ngFor="let hobby of hobbies; let i = index">

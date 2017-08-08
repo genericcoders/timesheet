@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
   name:string;
+  swap:boolean;
   age:number;
   email:string;
   address:Address;
@@ -19,6 +20,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.name  = "Name Last";
     this.age = 26;
+    this.swap = false;
     this.address = {
       street:"100 Main Street",
       city:"Orlando",
@@ -28,6 +30,17 @@ export class UserComponent implements OnInit {
     this.hobbies = ['Programming','Movies','Muay Thai'];
     this.email = "emailer@gmail.com";
     console.log("user ngOnInit ran..");
+  }
+
+  onClick() {
+    console.log('User clicked');
+    if(this.swap) {
+      this.name ="Swap Name";
+    }
+    else {
+      this.name = "Name Last";
+    }
+    this.swap = !this.swap;
   }
 }
 
