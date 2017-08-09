@@ -21,7 +21,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.name  = "Name Last";
     this.age = 26;
-    this.swap = false;
+    this.swap = true;
     this.address = {
       street:"100 Main Street",
       city:"Orlando",
